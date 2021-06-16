@@ -1,0 +1,42 @@
+{% load static %}
+{% url 'home' as home %}
+{% url 'about' as about %}
+<header class="header" id="header">
+    <div class="header__toggle">
+        <i class='bx bx-menu-alt-left' id="header-toggle"></i>
+    </div>
+
+    <div class="header__img">
+        <img src="{% static 'images/placeholder.png' %}" alt="">
+    </div>
+</header>
+
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href=" {% url 'home' %} " class="nav__logo">
+                <i class='bx bx-layer nav__logo-icon'></i>
+                <span class="nav__logo-name">iRute Demo</span>
+            </a>
+
+            <div class="nav__list">
+                <a href=" {% url 'home' %} " class="nav__link {% if request.path ==  home %}active{% endif %}">
+                <i class='bx bxs-home nav__icon' ></i>
+                    <span class="nav__name"> Home </span>
+                </a>
+
+                <a href="#" class="nav__link {% if request.path ==  '#' %}active{% endif %}">
+                    <i class='bx bxs-network-chart nav__icon' ></i>
+                        <span class="nav__name"> Lineas de Metro </span>
+                </a>
+            
+
+            </div>
+        </div>
+
+        <a href=" {% url 'about' %} " class="nav__link">
+            <i class='bx bxs-info-circle nav__icon' ></i>
+            <span class="nav__name">About</span>
+        </a>
+    </nav>
+</div>

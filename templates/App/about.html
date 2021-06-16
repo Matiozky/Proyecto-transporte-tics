@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12 mt-5 center-text">
+            <h1> Nuestro trabajo </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div data-aos="fade-right" class="col-lg-4 mt-5 main-box">
+            <h1 class="mt-4">Integrantes:</h1>
+            <div class="profile-container">
+                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/matiozky.png' %}" alt="">   Matías Rojas </h6>
+                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/mocka.png' %}" alt="">    Macarena Collao </h6>
+                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/vicky.png' %}" alt="">    Victoria Munizaga </h6>
+                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/pablito.png' %}" alt="">    Pablo Carcamo</h6>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-7 mt-5">
+            <div data-aos="fade-down" class="row lateral-box">
+                <h2 class="mt-4">Problema</h2>
+                <p> "El acceso al transporte público en las comunas más alejadas del centro de la ciudad es ineficiente, ya que se evidencia una poca variedad de opciones y rutas, lo que hace que los transportes de “acercamiento” al metro (como las micros) se saturen en algunos horarios del día, por ende, la gente se demora más en llegar a su destino. " </p>
+            </div>
+            <div class="row" style="height: 40px;"></div>
+            <div data-aos="fade-up" class="row lateral-box" >
+                <h2 class="mt-4">Objetivo</h2>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
