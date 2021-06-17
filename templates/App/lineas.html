@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="px-lg-5">
+  
+      <!-- For demo purpose -->
+      <div class="row py-5">
+        <div class="col-lg-12 mx-auto">
+          <div class="text-white p-5 shadow-sm rounded banner">
+            <h1 class="display-4">Infomate de las lineas de metro</h1>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+  
+      <div class="row">
+
+        <!-- Gallery items -->
+        {% for i in object %}
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm">
+                <div class="p-4">
+                <h5> <a href="{{ i.get_absolute_url }}" class="text-dark">{{ i.title }}</a></h5>
+                <div style="height: 45px;">
+                    <p class="small text-muted mb-0"> {{ i.mini_description|truncatewords:10 }} </p>
+                </div>
+                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">  Info. </span></p>
+                    <span class="badge rounded-pill {{i.color_tag}}"> {{i.title}} </span>
+                </div>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+        <!-- End -->
+  
+  
+      </div>
+      <div class="py-5 text-right"><a href="{% url 'home' %}" class="btn btn-dark px-5 py-3 text-uppercase">Volver al   <i class='bx bxs-home nav__icon' ></i></a></div>
+    </div>
+  </div>
+
+
+{% endblock content %}

@@ -9,7 +9,7 @@
   /*===== Colors =====*/
   --first-color: #3498DB; /* 4723D9 */
   --first-color-light: #AFA5D9;
-  --white-color: #F7F6FB;
+  --white-color: #F7F6FB; /* F7F6FB */
   
   /*===== Font and typography =====*/
   --body-font: 'Nunito', sans-serif;
@@ -239,4 +239,39 @@ a{
 }
 .center-text{
   text-align: center;
+}
+
+.info-card{
+  justify-content: center;
+  background-color: #F7F6FB;
+  height: 20rem;
+  margin: 10px;
+  border-radius: 25px;
+  padding-top: 10px;
+  
+}
+
+.card__icon{
+  
+  font-size: 100px; 
+  margin-top: 45px;
+}
+
+
+.banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+}
+.bg-orange{
+  background-color: rgb(230, 49, 40)
+}
+.bg-brown{
+  background-color: brown;
+}
+.bg-purple{
+  background-color: purple;
+}
+.bg-magenta{
+  background-color: magenta;
 }

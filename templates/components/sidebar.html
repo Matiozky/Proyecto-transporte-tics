@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'home' as home %}
+{% url 'lines' as lines %}
 {% url 'about' as about %}
 <header class="header" id="header">
     <div class="header__toggle">
@@ -25,18 +26,20 @@
                     <span class="nav__name"> Home </span>
                 </a>
 
-                <a href="#" class="nav__link {% if request.path ==  '#' %}active{% endif %}">
+                <a href="{% url 'lines' %}" class="nav__link {% if request.path ==  lines %}active{% endif %}">
                     <i class='bx bxs-network-chart nav__icon' ></i>
                         <span class="nav__name"> Lineas de Metro </span>
+                </a>
+
+                <a href="{% url 'about' %}" class="nav__link {% if request.path ==  about %}active{% endif %}">
+                    <i class='bx bxs-info-circle nav__icon' ></i>
+                        <span class="nav__name"> Acerca de  </span>
                 </a>
             
 
             </div>
         </div>
 
-        <a href=" {% url 'about' %} " class="nav__link">
-            <i class='bx bxs-info-circle nav__icon' ></i>
-            <span class="nav__name">About</span>
-        </a>
+        
     </nav>
 </div>

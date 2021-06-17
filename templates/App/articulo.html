@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- variable object -->
+<div data-aos="fade-down" class="row">
+    <div class="col-lg-12 mx-auto">
+        <div class="center-text mx-auto">
+            <h1 class="mt-5"> Articulo: {{ object.title }} </h1>
+            <img class="mt-5"src="{{ object.img.url }}" alt="">
+        </div>
+    </div>
+</div>
+<div data-aos="fade-up" class="row mt-5">
+    <div class="col-lg-6">
+        <div class="bg-white rounded shadow-sm">
+            <div class="p-4 mt-3">
+                <h2> Información relevante: </h2>
+                <p class="mt-4"> "{{ object.mini_description }}" </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="bg-white rounded shadow-sm">
+            <div class="p-4 mt-3">
+                <h3> Fuente: </h3>
+                {% if object.fuente %}
+                    <p> <a href="{{ object.fuente }}"> Referencia </a></p>
+                {% else %}
+                    <p> No hay fuente disponible. </p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="bg-white rounded shadow-sm">
+            <div class="p-4 mt-3">
+                <h3> Autor: </h3>
+                {% if object.autor %}
+                    <p> <img class="profile-picture" src="{{object.autor.profile_pic.url}}" alt=""> {{ object.autor }} <i>({{object.autor.username}})</i> </p>
+                {% else %}
+                    <p class="mt-4"> <img class="profile-picture" src="{% static 'images/anon.png' %}" alt=""> Anonimo. </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+<!--     <img src="{{ object.img.url }}" alt=""> -->
+{% endblock content %}
