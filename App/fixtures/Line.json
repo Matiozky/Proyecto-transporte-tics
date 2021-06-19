@@ -1,0 +1,90 @@
+[
+{
+    "model": "App.linea",
+    "pk": 1,
+    "fields": {
+        "title": "L1",
+        "img": "700px-Linea_1_del_Metro_de_Santiago.svg.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 2,
+    "fields": {
+        "title": "L2",
+        "img": "Mapa_Linea_2_Metro_de_Santiago.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 3,
+    "fields": {
+        "title": "L3",
+        "img": "Linea_3.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 4,
+    "fields": {
+        "title": "L4",
+        "img": "600px-Linea_4_del_Metro_de_Santiago.svg.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 5,
+    "fields": {
+        "title": "L4A",
+        "img": "250px-Linea_4A_del_Metro_de_Santiago.svg.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 6,
+    "fields": {
+        "title": "L5",
+        "img": "1920px-Linea_5_-_Metro_de_Santiago.svg.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 7,
+    "fields": {
+        "title": "L6",
+        "img": "Linea_6_del_Metro_de_Santiago.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 8,
+    "fields": {
+        "title": "L7",
+        "img": "Mapa_Linea_7_Metro_de_Santiago.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 9,
+    "fields": {
+        "title": "L8",
+        "img": "Linea_8_del_Metro_de_Santiago.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 10,
+    "fields": {
+        "title": "L9",
+        "img": "300px-Linea_9_del_Metro_de_Santiago.svg.png"
+    }
+},
+{
+    "model": "App.linea",
+    "pk": 11,
+    "fields": {
+        "title": "METRO TREN",
+        "img": "300px-Mapa_del_Metrotren_Rancagua.svg.png"
+    }
+}
+]
