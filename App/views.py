@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from .forms import DestinoForm
 from django.http import Http404
-from .models import Destino, Card
+from .models import Destino, Card, Recorrido
 from django.views.generic import DetailView
 
 
@@ -11,14 +11,24 @@ def home(request):
     if request.method == "POST" and formulario.is_valid():
             origen = formulario.cleaned_data.get('origen')
             destino = formulario.cleaned_data.get('destino')
-            print(origen)
-            print(destino)
+            solucion = Recorrido.objects.tiempo_sin_solucion(origen)
+            solucion2 = Recorrido.objects.tiempos_con_solucion(origen)
+            new_obj = Recorrido.objects.create(title='trip',origen=origen,destino=destino,tiempo_con=str(solucion2),tiempo_sin=str(solucion))
+            if new_obj is not None:
+                new_obj.save()
+            return redirect(f'/your-travel/{new_obj.slug}')
     ctx={
         'form': formulario
     }
     return render(request, 'App/home.html',ctx)
 
 
+def info_view(request,slug):
+    obj = Recorrido.objects.get(slug=slug)
+    ctx={
+        'instance':obj
+    }
+    return render(request, 'App/info_view.html',ctx)
 
 
 def lines(request):
@@ -27,6 +37,7 @@ def lines(request):
         'object':obj,
     }
     return render(request, 'App/lineas.html',ctx)
+
 
 class CardSlugView(DetailView):
     queryset = Card.objects.all()
@@ -46,9 +57,6 @@ class CardSlugView(DetailView):
         if instance is None:
             raise Http404("El Articulo no existe")
         return instance
-
-
-
 
 
 def about(request):

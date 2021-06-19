@@ -1,0 +1,38 @@
+[
+{
+    "model": "App.author",
+    "pk": 1,
+    "fields": {
+        "name": "Matías Rojas",
+        "username": "Matiozky",
+        "profile_pic": "matiozky_QP1A3XO_oHfuwES.png"
+    }
+},
+{
+    "model": "App.author",
+    "pk": 2,
+    "fields": {
+        "name": "Anónimo",
+        "username": "Anon",
+        "profile_pic": "anon_DdimYEu.png"
+    }
+},
+{
+    "model": "App.author",
+    "pk": 3,
+    "fields": {
+        "name": "Victoria Munizaga",
+        "username": "Viks",
+        "profile_pic": "viks.png"
+    }
+},
+{
+    "model": "App.author",
+    "pk": 4,
+    "fields": {
+        "name": "Macarena Collao",
+        "username": "Mocka",
+        "profile_pic": "IMG-20200705-WA0032.jpg"
+    }
+}
+]

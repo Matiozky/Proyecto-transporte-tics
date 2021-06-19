@@ -75,6 +75,116 @@ class Card(models.Model):
     def __str__(self):
         return self.title
 
+
+class RecorridoManager(models.Manager):
+    
+    def tiempo_sin_solucion(self, origen):
+        lista_comunas=["Cerro Navia","El Bosque","La Granja","La Pintana","Lo Espejo","Maipú","Pedro Aguirre Cerda","Puente Alto","Pudahuel","Quilicura","Renca","San Bernardo"]
+        tiempos_aproximados_del_10porciento_que_mas_tarda=[105,105,106,120,120,105,110,105,105,120,110,117]
+        tiempos_aproximados_comuna_a_Santiago=[51,47,45,59,43,56,33,58,42,43,37,49]
+        for i in range(0,12):
+            if origen == lista_comunas[i]:
+                tiempo_aproximado_de_traslado = (tiempos_aproximados_del_10porciento_que_mas_tarda[i] + tiempos_aproximados_comuna_a_Santiago[i])/2
+                return tiempo_aproximado_de_traslado
+
+    def tiempos_con_solucion(self, origen):
+        lista_comunas2=["Cerro Navia","El Bosque","La Granja","La Pintana","Lo Espejo","Maipú","Pedro Aguirre Cerda","Puente Alto","Pudahuel","Quilicura","Renca","San Bernardo"]
+        l=[]
+        Estaciones_CN_Stgo=[0,0,1,0,0,0,0,8,0,0,0]
+        segundostotales=[87,92,115,100,120,102,144,136,99,105,215]
+
+        if origen==lista_comunas2[0]:
+            for j in range(len(segundostotales)):
+                Tiempos_aproximados_solometro=Estaciones_CN_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[1]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_EB_Stgo=[0,18,0,0,0,2,0,0,0,0,0] 
+                Tiempos_aproximados_solometro=Estaciones_EB_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[2]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_LG_Stgo=[0,0,1,0,1,5,0,0,0,7,0]
+                Tiempos_aproximados_solometro=Estaciones_LG_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[3]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_LP_Stgo=[1,0,1,0,0,0,0,0,0,13,0]
+                Tiempos_aproximados_solometro=Estaciones_LP_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[4]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_LE_Stgo=[5,0,1,0,0,0,0,0,0,0,4]
+                Tiempos_aproximados_solometro=Estaciones_LE_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[5]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_Ma_Stgo=[0,0,0,0,0,16,0,0,0,0,0]
+                Tiempos_aproximados_solometro=Estaciones_Ma_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[6]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_PAC_Stgo=[5,0,1,0,0,0,0,0,0,0,3]
+                Tiempos_aproximados_solometro=Estaciones_PAC_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[7]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_PA_Stgo=[0,0,9,18,0,0,0,0,0,0,0]
+                Tiempos_aproximados_solometro=Estaciones_PA_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[8]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_Pu_Stgo=[0,0,0,0,0,13,0,0,0,0,0] 
+                Tiempos_aproximados_solometro=Estaciones_Pu_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[9]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_Qu_Stgo=[0,0,11,0,0,0,0,0,0,0,0] 
+                Tiempos_aproximados_solometro=Estaciones_Qu_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[10]:
+            for j in range(len(Estaciones_CN_Stgo)):   ##REVISAR LO DE RENCA
+                Estaciones_Re_Stgo=[0,0,4,0,0,0,0,10,0,0,0] 
+                Tiempos_aproximados_solometro=Estaciones_Re_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        elif origen==lista_comunas2[11]:
+            for j in range(len(Estaciones_CN_Stgo)):
+                Estaciones_SB_Stgo=[5,0,1,0,0,0,0,0,0,0,7] 
+                Tiempos_aproximados_solometro=Estaciones_SB_Stgo[j]*segundostotales[j]
+                l.append(Tiempos_aproximados_solometro)
+        return l
+        
+    def get_lines(self):
+        pass
+        
+
+
+
+class Recorrido(models.Model):
+    title = models.CharField(max_length=200)
+    origen = models.CharField(max_length=300)
+    slug = models.SlugField(blank=True,null=True,unique=True)
+    destino = models.CharField(max_length=300)
+    tiempo_con = models.CharField(max_length=100)
+    tiempo_sin = models.CharField(max_length=100)
+
+    objects = RecorridoManager()
+
+    def __str__(self):
+        return str(self.id)
+
+
+
+def producto_pre_save_reciver(sender, instance,*args, **kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
+
+pre_save.connect(producto_pre_save_reciver, sender = Recorrido)
+
+
+
+
+
 def producto_pre_save_reciver(sender, instance,*args, **kwargs):
     if not instance.slug:
         instance.slug = unique_slug_generator(instance)

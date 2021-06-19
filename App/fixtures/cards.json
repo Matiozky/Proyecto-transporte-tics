@@ -1,0 +1,197 @@
+[
+{
+    "model": "App.card",
+    "pk": 1,
+    "fields": {
+        "title": "Línea 1",
+        "slug": "linea-1",
+        "mini_description": "Es la más antigua de las siete líneas. También es la más utilizada de todas las que forman el Metro.\r\nLa Línea 1 tiene un total de 27 estaciones a lo largo de sus 20,4 kilómetros.\r\nEl recorrido completo de la línea, tarda aproximadamente 29,7 minutos.\r\nAtraviesan las comunas de Lo Prado, Estación Central, Santiago, Providencia y Las Condes.",
+        "color_tag": "bg-danger",
+        "img": "linea1_P0OU1uJ_28O6SIb.png",
+        "fuente": "https://www.google.com/search?q=anonymous+user&sxsrf=ALeKk02gRA9whto9JmcumpMBY_GuONd6KQ:1623961080520&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiu9dS6vp_xAhVxG7kGHS5ABBwQ_AUoAXoECAEQAw&biw=1108&bih=846#img",
+        "autor": 1
+    }
+},
+{
+    "model": "App.card",
+    "pk": 2,
+    "fields": {
+        "title": "Línea 2",
+        "slug": "linea-2",
+        "mini_description": "Comprende 22 estaciones a lo largo de 20,6 kilómetros, que se recorren en aproximadamente 34,2 minutos.\r\nPasa por las comunas de Huechuraba, Recoleta, Santiago, San Miguel y La Cisterna.",
+        "color_tag": "bg-warning",
+        "img": "download_LVizxoj.png",
+        "fuente": "https://www.google.com/search?q=anonymous+user&sxsrf=ALeKk02gRA9whto9JmcumpMBY_GuONd6KQ:1623961080520&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiu9dS6vp_xAhVxG7kGHS5ABBwQ_AUoAXoECAEQAw&biw=1108&bih=846#img",
+        "autor": 3
+    }
+},
+{
+    "model": "App.card",
+    "pk": 3,
+    "fields": {
+        "title": "Línea 3",
+        "slug": "linea-3",
+        "mini_description": "Comprende 18 estaciones a lo largo de 22 kilómetros, que se recorren en aproximadamente entre 25 a 30 minutos.\r\nAtraviesa las comunas de Quilicura, Conchalí, Independencia, Santiago, Ñuñoa y La Reina.",
+        "color_tag": "bg-brown",
+        "img": "IMG-20200705-WA0032_2hoBKaq.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 4,
+    "fields": {
+        "title": "Línea 4",
+        "slug": "linea-4",
+        "mini_description": "Comprende un total de 23 estaciones y 24,7 kilómetros de extensión, lo que la convierte en la segunda línea más larga de la red.\r\nEl recorrido completo se realiza en aproximadamente 40 minutos.\r\nCruza las comunas de Providencia, Las Condes, La Reina, Ñuñoa, Peñalolén, Macul, La Florida y Puente Alto.",
+        "color_tag": "bg-primary",
+        "img": "IMG-20200705-WA0032_RZmbuTO.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 5,
+    "fields": {
+        "title": "Línea 4A",
+        "slug": "linea-4a",
+        "mini_description": "Es la línea de menor extensión de la Red.\r\nComprende un total de 6 estaciones.\r\nTiene una extensión de 7,7 kilómetros.\r\nEl recorrido completo de la línea se realiza en menos de 12 minutos.\r\nAtraviesa las comunas de La Florida, La Granja, San Ramón y La Cisterna.",
+        "color_tag": "bg-secondary",
+        "img": "IMG-20200705-WA0032_BpHPr13.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 6,
+    "fields": {
+        "title": "Línea 5",
+        "slug": "linea-5",
+        "mini_description": "Es la más larga de la red.\r\nComprende un total de 30 estaciones.\r\nTiene una extensión de 30 kilómetros.\r\nEl recorrido completo de la línea es de 51 minutos.\r\nCruza las comunas de Maipú, Pudahuel, Lo Prado, Quinta Normal, Santiago, Providencia, Ñuñoa, Macul, San Joaquín y La Florida.",
+        "color_tag": "bg-success",
+        "img": "IMG-20200705-WA0032_GvE2qlN.jpg",
+        "fuente": null,
+        "autor": null
+    }
+},
+{
+    "model": "App.card",
+    "pk": 7,
+    "fields": {
+        "title": "Línea 6",
+        "slug": "linea-6",
+        "mini_description": "Comprende en total 10 estaciones.\r\nSu extensión es de 15,3 kilómetros.\r\nEl recorrido completo de la línea es en aproximadamente 19 a 20 minutos.\r\nAtraviesa las comunas de Cerrillos, Pedro Aguirre Cerda, San Miguel, San Joaquín, Santiago, Ñuñoa y Providencia.",
+        "color_tag": "bg-purple",
+        "img": "IMG-20200705-WA0032_zv77DLX.jpg",
+        "fuente": null,
+        "autor": null
+    }
+},
+{
+    "model": "App.card",
+    "pk": 8,
+    "fields": {
+        "title": "Línea 7",
+        "slug": "linea-7",
+        "mini_description": "La Línea 7 será una nueva línea que formará parte del Metro de Santiago y contará con una extensión aproximada de 26 kilómetros.\r\n1.35 millones de habitantes serán beneficiados con la creación de esta nueva línea.\r\nEl recorrido completo de la línea será de 43 minutos aproximadamente.\r\nEl número de estaciones serán 19.\r\nLas comunas beneficiadas serán: Renca, Cerro Navia, Quinta Normal, Santiago, Providencia, Las Condes, Vitacura.",
+        "color_tag": "bg-secondary",
+        "img": "IMG-20200705-WA0032_eVOtfWY.jpg",
+        "fuente": null,
+        "autor": null
+    }
+},
+{
+    "model": "App.card",
+    "pk": 9,
+    "fields": {
+        "title": "Línea 8",
+        "slug": "linea-8",
+        "mini_description": "La Línea 8 será una nueva línea que formará parte del Metro de Santiago y contará con una extensión aproximada de 19 kilómetros.\r\n1.6 millones de habitantes serán beneficiados con la creación de esta nueva línea.\r\nPermitirá reducir en 60% los tiempos de viaje entre Providencia y Puente Alto (23 minutos aprox. de viaje)\r\nEl número de estaciones serán 14.\r\nLas comunas beneficiadas serán: Providencia, Ñuñoa, Macul, La Florida, Puente Alto.",
+        "color_tag": "bg-orange",
+        "img": "IMG-20200705-WA0032_xFzdrse.jpg",
+        "fuente": null,
+        "autor": null
+    }
+},
+{
+    "model": "App.card",
+    "pk": 10,
+    "fields": {
+        "title": "Línea 9",
+        "slug": "linea-9",
+        "mini_description": "La Línea 9 será una nueva línea que formará parte del Metro de Santiago y contará con una extensión aproximada de 17 kilómetros.\r\n900 mil habitantes serán beneficiados con la creación de esta nueva línea.\r\nPermitirá reducir en aproximadamente un 70% los tiempos de viaje entre Santiago y La Pintana (21 minutos estimados de viaje)\r\nEl número de estaciones serán 12.\r\nLas comunas beneficiadas serán: Santiago, San Miguel, San Joaquín, La Granja, San Ramón, La Pintana.",
+        "color_tag": "bg-secondary",
+        "img": "IMG-20200705-WA0032_YYWzWNF.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 11,
+    "fields": {
+        "title": "Extensión Línea 2",
+        "slug": "extension-linea-2",
+        "mini_description": "El proyecto ya lleva un avance del 63%.\r\nLa extensión de la Línea 2 contará con amplios espacios y también con equipamiento accesible para personas con movilidad reducida, como ascensores y escaleras mecánicas.\r\nLa puesta en servicio de la ampliación de Línea 2 está prevista para 2023.\r\nExtensión: 5.2 km de longitud.\r\nPersonas beneficiadas: 600 mil habitantes.\r\nNúmero de estaciones: 4 (El Bosque, Observatorio, Copa Lo Martínez y El Pino).\r\nSe espera que esta nueva extensión ayude en un 46% la reducción en los tiempo de viaje (cerca de 22 minutos).\r\nComunas beneficiadas: La Cisterna, El Bosque, San Bernardo.",
+        "color_tag": "bg-warning",
+        "img": "IMG-20200705-WA0032_r5TMPAs.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 12,
+    "fields": {
+        "title": "Extensión Línea 3",
+        "slug": "extension-linea-3",
+        "mini_description": "El proyecto ya lleva un avance del 43%.\r\nLa puesta en servicio de la ampliación de Línea 3 está prevista para 2023.\r\nSe espera que esta nueva extensión ayude en un 67% la reducción en los tiempo de viaje \r\nEsto permitirá a los y las usuarias, viajar entre Quilicura y el centro de Santiago en aproximadamente 15 minutos.\r\nExtensión: 3.8 km de longitud.\r\nPersonas beneficiadas: 210 mil habitantes.\r\nNúmero de estaciones: 3 (Ferrocarril, Lo Cruzat y Plaza de Quilicura).\r\nComuna beneficiada: Quilicura",
+        "color_tag": "bg-brown",
+        "img": "IMG-20200705-WA0032_ZrPsutD.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 13,
+    "fields": {
+        "title": "Extensión Línea 4",
+        "slug": "extension-linea-4",
+        "mini_description": "Extensión: 4 km de longitud.\r\nPersonas beneficiadas: 600 mil habitantes.\r\nTiempo de viaje: El tiempo de viaje aproximado desde Tobalaba a Bajos de Mena será de cerca de 40 minutos\r\nNúmero de estaciones: 3\r\nComuna beneficiada: Puente Alto",
+        "color_tag": "bg-primary",
+        "img": "IMG-20200705-WA0032_BnEqGb5.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 14,
+    "fields": {
+        "title": "Anillo de Vespucio",
+        "slug": "anillo-de-vespucio",
+        "mini_description": "Falta info",
+        "color_tag": "bg-danger",
+        "img": "IMG-20200705-WA0032_gvmCgC8.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+},
+{
+    "model": "App.card",
+    "pk": 15,
+    "fields": {
+        "title": "Extensión Línea 5",
+        "slug": "extension-linea-5",
+        "mini_description": "Mayor conexión con Pudahuel\r\nDistancia total 3,3 km.\r\nNúmero de estaciones: 4.",
+        "color_tag": "bg-secondary",
+        "img": "IMG-20200705-WA0032_eyvqMaM.jpg",
+        "fuente": null,
+        "autor": 4
+    }
+}
+]

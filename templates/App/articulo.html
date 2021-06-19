@@ -2,17 +2,17 @@
 {% load static %}
 {% block content %}
 <!-- variable object -->
-<div data-aos="fade-down" class="row">
+<div class="row">
     <div class="col-lg-12 mx-auto">
         <div class="center-text mx-auto">
-            <h1 class="mt-5"> Articulo: {{ object.title }} </h1>
-            <img class="mt-5"src="{{ object.img.url }}" alt="">
+            <h1 data-aos="zoom-in" class="mt-5"> Articulo: {{ object.title }} </h1>
+            <img data-aos="fade-up" class="img-fluid mt-5"src="{{ object.img.url }}" alt="">
         </div>
     </div>
 </div>
-<div data-aos="fade-up" class="row mt-5">
+<div class="row mt-5">
     <div class="col-lg-6">
-        <div class="bg-white rounded shadow-sm">
+        <div data-aos="fade-right" class="bg-white rounded shadow-sm">
             <div class="p-4 mt-3">
                 <h2> Información relevante: </h2>
                 <p class="mt-4"> "{{ object.mini_description }}" </p>
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="col-lg-6">
-        <div class="bg-white rounded shadow-sm">
+        <div data-aos="fade-left" class="bg-white rounded shadow-sm">
             <div class="p-4 mt-3">
                 <h3> Fuente: </h3>
                 {% if object.fuente %}
@@ -30,7 +30,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="bg-white rounded shadow-sm">
+        <div data-aos="fade-up" class="bg-white rounded shadow-sm">
             <div class="p-4 mt-3">
                 <h3> Autor: </h3>
                 {% if object.autor %}

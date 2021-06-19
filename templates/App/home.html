@@ -1,51 +1,60 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div data-aos="fade-down" class="row custom-col-center">
+<div class="row custom-col-center">
  
-    <div class="mt-5 img__home ">
+    <div data-aos="zoom-in" class="mt-5 img__home ">
         <img src="{% static 'images/map.png' %}" alt="">
     </div>
 
 </div>
 
 <form action="{% url 'home' %}" method="POST"> {% csrf_token %}
-    <div data-aos="fade-up" class="row">
+
+
+    <div class="row">
+
         <div class="col-lg-2"></div>
         
         <div class="col-lg-8 mx-auto" style="text-align: center;">
-            <h1 class="mt-5 mb-5"> ¡Calcula tu viaje! </h1>
 
-                    <div style="text-align: left;">
+            <h1 data-aos="fade-down" class="mt-5 mb-5"> ¡Calcula tu viaje! </h1>
+
+                    <div data-aos="fade-up" style="text-align: left;">
                         <h3>Desde donde vas: </h3>
                     </div>
                         
-                    <div class="form-floating">
+                    <div data-aos="fade-up" class="form-floating">
                     {{ form.origen }} 
                     <label for="floatingSelect"> Selecciona tu comuna de origen <i class='bx bx-current-location' ></i></label>
                     </div>
                     
-            </div>
+        </div>
         <div class="col-lg-2"></div>
+
     </div>
-    <div data-aos="fade-up" class="row mt-5">
+
+    <div class="row mt-5">
+
         <div class="col-lg-2"></div>
 
         <div class="col-lg-8 mx-auto">
-            <div>
-                <h3>Te diriges a:  <span style="font-weight: lighter; font-size: 15px;">(Único destino disponible <i style="color: red;" class="fas fa-exclamation-circle"></i>)</span></h3>
+
+            <div data-aos="fade-up">
+                <h3>Te diriges a:  <span style="font-weight: lighter; font-size: 15px;">(Único destino disponible)</span></h3>
             </div>
 
-            <div class="form-floating mb-5"style="text-align: center;">
+            <div data-aos="fade-up" class="form-floating mb-5"style="text-align: center;">
                 {{form.destino}}
                 <label for="floatingSelect">Selecciona tu destino <i class='bx bx-location-plus' ></i> </label>
             </div>
 
-            <button style="float: right;" class="btn btn-outline-dark btn-lg" type="submit">¡Calcular!</button>
+            <button data-aos="fade-right" data-aos-duration="600" style="float: right;" class="btn btn-outline-dark btn-lg" type="submit">¡Calcular!</button>
         </div>
 
 
         <div class="col-lg-2"></div>
+
     </div>
 </form>
 {% endblock content %}

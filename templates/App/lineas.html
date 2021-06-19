@@ -7,7 +7,7 @@
       <!-- For demo purpose -->
       <div class="row py-5">
         <div class="col-lg-12 mx-auto">
-          <div class="text-white p-5 shadow-sm rounded banner">
+          <div data-aos="zoom-in" class="text-white p-5 shadow-sm rounded banner">
             <h1 class="display-4">Infomate de las lineas de metro</h1>
           </div>
         </div>
@@ -19,7 +19,7 @@
         <!-- Gallery items -->
         {% for i in object %}
             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-            <div class="bg-white rounded shadow-sm">
+            <div data-aos="zoom-in" class="bg-white rounded shadow-sm">
                 <div class="p-4">
                 <h5> <a href="{{ i.get_absolute_url }}" class="text-dark">{{ i.title }}</a></h5>
                 <div style="height: 45px;">

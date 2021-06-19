@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12 mt-5">
+            <div data-aos="zoom-in" class="center-text">
+                <h1> ¡Tu viaje está listo!</h1>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-lg-4 mt-5">
+            <div data-aos="fade-right"class="bg-white rounded shadow-sm">
+                <div class="p-4 mt-3">
+                    <div class="center-text">
+                        <h2> Información </h2>
+                    </div>
+                    <p class="mt-4"> Origen: {{ instance.origen }}</p>
+                    <p class="mt-4"> Destino: {{ instance.destino }}</p>
+                    <p class="mt-4"> Líneas: </p>
+                    <p class="mt-4"> Tiempo sin solución: {{ instance.tiempo_sin }}</p>
+                    <p class="mt-4"> Tiempo con solución: {{ instance.tiempo_con }}</p>
+                    
+                </div>
+        </div>
+        </div>
+        <div class="col-lg-8 mt-5">
+            <div data-aos="fade-up" class="bg-white rounded shadow-sm">
+            <div class="p-4 mt-3">
+                <div class="center-text">
+                    <h2> Instrucciones: </h2>
+                </div>
+                
+                <p class="mt-4">  </p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
