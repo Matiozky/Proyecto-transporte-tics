@@ -19,7 +19,13 @@
                     </div>
                     <p class="mt-4"> Origen: {{ instance.origen }}</p>
                     <p class="mt-4"> Destino: {{ instance.destino }}</p>
-                    <p class="mt-4"> Líneas: </p>
+                    <p class="mt-4"> 
+                        Líneas: 
+                        {% for i in instance.lineas.all %} 
+                            {{ i.title }}.
+                        {% endfor %}
+
+                    </p>
                     <p class="mt-4"> Tiempo sin solución: {{ instance.tiempo_sin }}</p>
                     <p class="mt-4"> Tiempo con solución: {{ instance.tiempo_con }}</p>
                     
@@ -31,6 +37,11 @@
             <div class="p-4 mt-3">
                 <div class="center-text">
                     <h2> Instrucciones: </h2>
+                </div>
+                <div>
+                    {% for i in instance.lineas.all %}
+                        <img src="{{ i.img.url }}" class="img-fluid" alt="...">
+                    {% endfor %}
                 </div>
                 
                 <p class="mt-4">  </p>

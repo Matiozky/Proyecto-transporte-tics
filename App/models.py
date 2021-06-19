@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.base import Model
 from django.db.models.fields import DateTimeField, TimeField
 from django.db.models.signals import pre_save
 from .utils import unique_slug_generator
@@ -63,7 +64,7 @@ class Destino(models.Model):
 class Card(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(blank=True,null=True,unique=True)
-    mini_description = models.TextField(max_length=200)
+    mini_description = models.TextField(max_length=5000)
     color_tag = models.CharField(max_length=100,choices=COLOR_OPTIONS,default='bg-primary')
     img = models.ImageField()
     fuente = models.URLField(blank=True,null=True)
@@ -93,6 +94,17 @@ class RecorridoManager(models.Manager):
         Estaciones_CN_Stgo=[0,0,1,0,0,0,0,8,0,0,0]
         segundostotales=[87,92,115,100,120,102,144,136,99,105,215]
 
+        lineas = []
+
+        def get_line(lista):
+            lins = ['L1','L2','L3','L4','L4A','L5','L6','L7','L8','L9','METRO TREN']
+            for i in range(0,len(lins)):
+                if lista[i] != 0:
+                    lineas.append(lins[i])
+
+
+
+
         if origen==lista_comunas2[0]:
             for j in range(len(segundostotales)):
                 Tiempos_aproximados_solometro=Estaciones_CN_Stgo[j]*segundostotales[j]
@@ -101,63 +113,86 @@ class RecorridoManager(models.Manager):
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_EB_Stgo=[0,18,0,0,0,2,0,0,0,0,0] 
                 Tiempos_aproximados_solometro=Estaciones_EB_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_EB_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[2]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_LG_Stgo=[0,0,1,0,1,5,0,0,0,7,0]
                 Tiempos_aproximados_solometro=Estaciones_LG_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_LG_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[3]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_LP_Stgo=[1,0,1,0,0,0,0,0,0,13,0]
                 Tiempos_aproximados_solometro=Estaciones_LP_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_LP_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[4]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_LE_Stgo=[5,0,1,0,0,0,0,0,0,0,4]
                 Tiempos_aproximados_solometro=Estaciones_LE_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_LE_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[5]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_Ma_Stgo=[0,0,0,0,0,16,0,0,0,0,0]
                 Tiempos_aproximados_solometro=Estaciones_Ma_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_Ma_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[6]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_PAC_Stgo=[5,0,1,0,0,0,0,0,0,0,3]
                 Tiempos_aproximados_solometro=Estaciones_PAC_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_PAC_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[7]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_PA_Stgo=[0,0,9,18,0,0,0,0,0,0,0]
                 Tiempos_aproximados_solometro=Estaciones_PA_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_PA_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[8]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_Pu_Stgo=[0,0,0,0,0,13,0,0,0,0,0] 
                 Tiempos_aproximados_solometro=Estaciones_Pu_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_Pu_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[9]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_Qu_Stgo=[0,0,11,0,0,0,0,0,0,0,0] 
                 Tiempos_aproximados_solometro=Estaciones_Qu_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_Qu_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[10]:
             for j in range(len(Estaciones_CN_Stgo)):   ##REVISAR LO DE RENCA
                 Estaciones_Re_Stgo=[0,0,4,0,0,0,0,10,0,0,0] 
                 Tiempos_aproximados_solometro=Estaciones_Re_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_Re_Stgo)
                 l.append(Tiempos_aproximados_solometro)
         elif origen==lista_comunas2[11]:
             for j in range(len(Estaciones_CN_Stgo)):
                 Estaciones_SB_Stgo=[5,0,1,0,0,0,0,0,0,0,7] 
                 Tiempos_aproximados_solometro=Estaciones_SB_Stgo[j]*segundostotales[j]
+                get_line(Estaciones_SB_Stgo)
                 l.append(Tiempos_aproximados_solometro)
-        return l
         
-    def get_lines(self):
-        pass
+        Tiempos_aproximados_moovit_solometro=[89,116,53,122,84,44,55,59,39,125,82,129]
+
+        for i in range(0, 12):
+            if origen == lista_comunas2[i]:
+                tiempo_aproximado_con_solucion_solometro = (Tiempos_aproximados_moovit_solometro[i]+(sum(l)/60))/2
+
+
+
+        return tiempo_aproximado_con_solucion_solometro, lineas
         
 
+class Linea(models.Model):
+    title = models.CharField(max_length=200)
+    img = models.ImageField(blank=True,null=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Recorrido(models.Model):
@@ -167,6 +202,7 @@ class Recorrido(models.Model):
     destino = models.CharField(max_length=300)
     tiempo_con = models.CharField(max_length=100)
     tiempo_sin = models.CharField(max_length=100)
+    lineas = models.ManyToManyField(Linea,blank=True)
 
     objects = RecorridoManager()
 
