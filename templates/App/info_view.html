@@ -22,7 +22,8 @@
                     <p class="mt-4"> 
                         Líneas: 
                         {% for i in instance.lineas.all %} 
-                            {{ i.title }}.
+                            <a href="{{ i.img.url }}">{{ i.title }}</a>
+                            
                         {% endfor %}
 
                     </p>
@@ -38,14 +39,14 @@
                 <div class="center-text">
                     <h2> Instrucciones: </h2>
                 </div>
-                <div>
-                    {% for i in instance.lineas.all %}
-                        <img src="{{ i.img.url }}" class="img-fluid" alt="...">
-                    {% endfor %}
+                
+                <div class="center-text mt-5 mb-5">
+                   <h1 class="mt-5"> Proximamente ! </h1> 
                 </div>
                 
-                <p class="mt-4">  </p>
             </div>
         </div>
     </div>
+    </div>
+    
 {% endblock content %}

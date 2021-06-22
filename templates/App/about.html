@@ -17,9 +17,9 @@
                         <h1 class="mt-4">Integrantes:</h1>  
                     </div>
                 <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/matiozky.png' %}" alt="">   Matías Rojas </h6>
-                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/Mocka.png' %}" alt="">    Macarena Collao </h6>
+                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/maca.png' %}" alt="">    Macarena Collao </h6>
                 <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/vicky.png' %}" alt="">    Victoria Munizaga </h6>
-                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/pablito.png' %}" alt="">    Pablo Carcamo</h6>
+                <h6 class="mt-4"> <img class="profile-picture" src="{% static 'images/pablo.png' %}" alt="">    Pablo Carcamo</h6>
             </div>
             </div>
         </div>
@@ -27,13 +27,17 @@
             <div data-aos="fade-left" data-aos-duration="600" class="bg-white rounded shadow-sm">
                 <div class="p-4 mt-3">
                     <h3> Introducción: </h3>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ut non sapiente, vel corporis sequi at vitae libero perferendis neque. Facilis provident soluta, eos cupiditate nobis nemo blanditiis fuga ratione? </p>
+                    <p> 
+                        {{ object.intro|linebreaks }}
+                    </p>
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="600" class="bg-white rounded shadow-sm">
                 <div class="p-4 mt-3">
                     <h3> Problema: </h3>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto culpa molestias quas tenetur officia exercitationem veritatis labore! Facere, magni veniam quibusdam nihil eum dignissimos doloribus ullam, blanditiis ex debitis corrupti. </p>
+                    <p> 
+                        {{ object.problema|linebreaks }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -46,7 +50,9 @@
                     <div class="center-text">
                         <h1 class="mt-4">Resolucion del problema:</h1>  
                     </div>
-                    <p class="mt-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sit tenetur hic pariatur. Minus unde odio error tenetur deserunt ducimus iure, perferendis nobis aliquam sed, quasi vero sit vel! Delectus! </p>
+                    <p class="mt-5"> 
+                        {{ object.solucion|linebreaks }}
+                    </p>
             </div>
             </div>
         </div>

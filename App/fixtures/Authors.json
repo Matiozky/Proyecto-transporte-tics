@@ -5,7 +5,7 @@
     "fields": {
         "name": "Matías Rojas",
         "username": "Matiozky",
-        "profile_pic": "matiozky_QP1A3XO_oHfuwES.png"
+        "profile_pic": "matiozky_Rr5HYqW.png"
     }
 },
 {
@@ -14,7 +14,7 @@
     "fields": {
         "name": "Anónimo",
         "username": "Anon",
-        "profile_pic": "anon_DdimYEu.png"
+        "profile_pic": "anonymous-message.png"
     }
 },
 {
@@ -23,7 +23,7 @@
     "fields": {
         "name": "Victoria Munizaga",
         "username": "Viks",
-        "profile_pic": "viks.png"
+        "profile_pic": "vicky_fyULiM1.png"
     }
 },
 {
@@ -32,7 +32,16 @@
     "fields": {
         "name": "Macarena Collao",
         "username": "Mocka",
-        "profile_pic": "IMG-20200705-WA0032.jpg"
+        "profile_pic": "maca_qPGU6oV.png"
+    }
+},
+{
+    "model": "App.author",
+    "pk": 5,
+    "fields": {
+        "name": "Pablo Carcamo",
+        "username": "Pablito",
+        "profile_pic": "pablo_m3LcVEp_TouTW9L.png"
     }
 }
 ]

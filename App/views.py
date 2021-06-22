@@ -1,7 +1,9 @@
+from django.db import models
+from django.db.models.base import Model
 from django.shortcuts import redirect, render, get_object_or_404
 from .forms import DestinoForm
 from django.http import Http404
-from .models import Destino, Card, Recorrido, Linea
+from .models import Card, Recorrido, AboutInfo
 from django.views.generic import DetailView
 
 
@@ -11,27 +13,25 @@ def home(request):
     if request.method == "POST" and formulario.is_valid():
             origen = formulario.cleaned_data.get('origen')
             destino = formulario.cleaned_data.get('destino')
-            solucion = Recorrido.objects.tiempo_sin_solucion(origen)
-            solucion2,lineas = Recorrido.objects.tiempos_con_solucion(origen)
 
-            lns = []
-            for i in lineas:
-                if i not in lns:
-                    lns.append(i)
+            if destino == "Plaza de armas":
+                solucion = Recorrido.objects.tiempos_sin_plaza(origen)
+                solucion2,lineas = Recorrido.objects.tiempos_con_plaza(origen)
 
-            new_obj = Recorrido.objects.create(title='trip',origen=origen,destino=destino,tiempo_con=str(solucion2),tiempo_sin=str(solucion))
-            if new_obj is not None:
-                new_obj.save()
+                new_obj = Recorrido.objects.create_object(lineas,origen,destino,solucion,solucion2)
 
-            for i in lns:
-                ln_obj = Linea.objects.get(title=i)
-                print(ln_obj)
-                if ln_obj is not None:
-                    new_obj.lineas.add(ln_obj)
-                    new_obj.save()
+                return redirect(f'/your-travel/{new_obj.slug}')
+
+            elif destino == "Escuela Militar":
+                solucion = Recorrido.objects.tiempos_sin_escuela(origen)
+                solucion2,lineas = Recorrido.objects.tiempos_con_escuela(origen)
+                print(lineas)
+
+                new_obj = Recorrido.objects.create_object(lineas,origen,destino,solucion,solucion2)
 
 
-            return redirect(f'/your-travel/{new_obj.slug}')
+                return redirect(f'/your-travel/{new_obj.slug}')
+
     ctx={
         'form': formulario
     }
@@ -75,5 +75,8 @@ class CardSlugView(DetailView):
 
 
 def about(request):
-    ctx = {}
+    obj = AboutInfo.objects.get(title = 'Oficial')
+    ctx = {
+        'object':obj
+    }
     return render(request,'App/about.html',ctx)
