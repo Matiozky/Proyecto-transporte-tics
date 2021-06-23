@@ -4,7 +4,7 @@
 - Universidad Adolfo Ibáñez 
 ## Instrucciones
 #### Primero se debe descargar el proyecto, si tienes git instalado en tu computador puedes utilizar 
-- `git clone https://github.com/Matiozky/Projecto-transporte-tics`
+- `git clone https://github.com/Matiozky/Proyecto-transporte-tics`
 > si no tienes git puedes descargar el proyecto en formato zip
 #### Instalar dependencias
 - `pip install django==3.2.4`
