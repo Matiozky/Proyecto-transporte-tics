@@ -11,7 +11,7 @@
 - `pip install pillow==8.2.0`
 ## Como usar
 #### Ingresar a la carpeta contenedora
-- `cd Projecto-transporte-tics`
+- `cd Proyecto-transporte-tics`
 #### Iniciar servidor de pruebas
 - `python manage.py runserver`
 
